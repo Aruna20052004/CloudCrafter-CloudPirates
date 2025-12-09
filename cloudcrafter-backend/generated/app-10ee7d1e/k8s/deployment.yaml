@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-10ee7d1e
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-10ee7d1e
+  template:
+    metadata:
+      labels:
+        app: app-10ee7d1e
+    spec:
+      containers:
+      - image: app-10ee7d1e:latest
+        name: app-10ee7d1e
+        ports:
+        - containerPort: 8080

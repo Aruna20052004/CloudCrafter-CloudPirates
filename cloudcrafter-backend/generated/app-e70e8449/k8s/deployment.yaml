@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-e70e8449
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-e70e8449
+  template:
+    metadata:
+      labels:
+        app: app-e70e8449
+    spec:
+      containers:
+      - image: app-e70e8449:latest
+        name: app-e70e8449
+        ports:
+        - containerPort: 8080

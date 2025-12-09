@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-1645148d
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-1645148d
+  template:
+    metadata:
+      labels:
+        app: app-1645148d
+    spec:
+      containers:
+      - image: app-1645148d:latest
+        name: app-1645148d
+        ports:
+        - containerPort: 8080

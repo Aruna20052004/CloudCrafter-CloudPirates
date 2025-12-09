@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-ed24340a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-ed24340a
+  template:
+    metadata:
+      labels:
+        app: app-ed24340a
+    spec:
+      containers:
+      - image: app-ed24340a:latest
+        name: app-ed24340a
+        ports:
+        - containerPort: 8080

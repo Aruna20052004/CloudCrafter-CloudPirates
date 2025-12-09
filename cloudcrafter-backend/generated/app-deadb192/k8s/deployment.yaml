@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deadb192
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-deadb192
+  template:
+    metadata:
+      labels:
+        app: app-deadb192
+    spec:
+      containers:
+      - image: app-deadb192:latest
+        name: app-deadb192
+        ports:
+        - containerPort: 8080

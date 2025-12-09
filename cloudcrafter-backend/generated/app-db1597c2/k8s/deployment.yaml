@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-db1597c2
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-db1597c2
+  template:
+    metadata:
+      labels:
+        app: app-db1597c2
+    spec:
+      containers:
+      - image: app-db1597c2:latest
+        name: app-db1597c2
+        ports:
+        - containerPort: 8080

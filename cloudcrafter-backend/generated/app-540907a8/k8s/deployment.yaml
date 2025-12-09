@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-540907a8
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-540907a8
+  template:
+    metadata:
+      labels:
+        app: app-540907a8
+    spec:
+      containers:
+      - image: app-540907a8:latest
+        name: app-540907a8
+        ports:
+        - containerPort: 8080

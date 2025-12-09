@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudcrafter-test
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudcrafter-test
+  template:
+    metadata:
+      labels:
+        app: cloudcrafter-test
+    spec:
+      containers:
+      - image: cloudcrafter-test:latest
+        name: cloudcrafter-test
+        ports:
+        - containerPort: 8080

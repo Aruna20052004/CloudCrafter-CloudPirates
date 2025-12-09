@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-743ed99d
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-743ed99d
+  template:
+    metadata:
+      labels:
+        app: app-743ed99d
+    spec:
+      containers:
+      - image: app-743ed99d:latest
+        name: app-743ed99d
+        ports:
+        - containerPort: 8080

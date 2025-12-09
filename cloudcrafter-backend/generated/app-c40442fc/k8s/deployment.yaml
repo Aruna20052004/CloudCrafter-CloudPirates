@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-c40442fc
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-c40442fc
+  template:
+    metadata:
+      labels:
+        app: app-c40442fc
+    spec:
+      containers:
+      - image: app-c40442fc:latest
+        name: app-c40442fc
+        ports:
+        - containerPort: 8080

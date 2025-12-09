@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-fb732d70
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-fb732d70
+  template:
+    metadata:
+      labels:
+        app: app-fb732d70
+    spec:
+      containers:
+      - image: app-fb732d70:latest
+        name: app-fb732d70
+        ports:
+        - containerPort: 8080

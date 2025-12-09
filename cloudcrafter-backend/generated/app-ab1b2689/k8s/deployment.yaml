@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-ab1b2689
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-ab1b2689
+  template:
+    metadata:
+      labels:
+        app: app-ab1b2689
+    spec:
+      containers:
+      - image: app-ab1b2689:latest
+        name: app-ab1b2689
+        ports:
+        - containerPort: 8080

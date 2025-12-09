@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: cloudcrafter-demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cloudcrafter-demo
+  template:
+    metadata:
+      labels:
+        app: cloudcrafter-demo
+    spec:
+      containers:
+        - name: cloudcrafter-demo
+          image: inchara11/cloudcrafter-demo:v1
+          resources:
+            requests:
+              memory: "64Mi"
+              cpu: "50m"
+            limits:
+              memory: "128Mi"
+          ports:
+            - containerPort: 8080

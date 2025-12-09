@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-ed2cf056
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-ed2cf056
+  template:
+    metadata:
+      labels:
+        app: app-ed2cf056
+    spec:
+      containers:
+      - image: app-ed2cf056:latest
+        name: app-ed2cf056
+        ports:
+        - containerPort: 8080

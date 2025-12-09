@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-bcb2e391
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-bcb2e391
+  template:
+    metadata:
+      labels:
+        app: app-bcb2e391
+    spec:
+      containers:
+      - image: app-bcb2e391:latest
+        name: app-bcb2e391
+        ports:
+        - containerPort: 8080

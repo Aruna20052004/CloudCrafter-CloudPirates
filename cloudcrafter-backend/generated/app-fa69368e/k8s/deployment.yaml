@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-fa69368e
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-fa69368e
+  template:
+    metadata:
+      labels:
+        app: app-fa69368e
+    spec:
+      containers:
+      - image: app-fa69368e:latest
+        name: app-fa69368e
+        ports:
+        - containerPort: 8080

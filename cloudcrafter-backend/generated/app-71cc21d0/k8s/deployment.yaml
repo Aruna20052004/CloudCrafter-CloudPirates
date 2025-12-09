@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-71cc21d0
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-71cc21d0
+  template:
+    metadata:
+      labels:
+        app: app-71cc21d0
+    spec:
+      containers:
+      - image: app-71cc21d0:latest
+        name: app-71cc21d0
+        ports:
+        - containerPort: 8080

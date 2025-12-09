@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-8265cb3a
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: app-8265cb3a
+  template:
+    metadata:
+      labels:
+        app: app-8265cb3a
+    spec:
+      containers:
+      - image: app-8265cb3a:latest
+        name: app-8265cb3a
+        ports:
+        - containerPort: 8080
